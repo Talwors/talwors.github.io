@@ -5,6 +5,15 @@ $("#sendMail").on("click", function() {
 	var message = $("#message").val().trim();
 	var formData = $('input[type=checkbox]:checked').serialize();
    console.log('Posting the following: ', formData);
+	
+	if(formData ==""){
+		$("#errorMess").text("Укажите проблему");
+		return false;
+	}
+	if(message ==""){
+		$("#errorMess").text("Введите сообщение");
+		return false;
+	}
 
 	$("#errorMess").text("");
 
