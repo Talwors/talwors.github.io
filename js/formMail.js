@@ -20,10 +20,7 @@ $("#sendMail").on("click", function() {
 		success: function(data){
 
 		$("#sendMail").prop("disabled", false);
-		$("#formPlace").text("<span>Спасибо, ваш отзыв очень важен для нас!:)</span>");
-		}
-		error: function(data){
-		$("#errorMess").text("Произошла ошибка, повторите попытку!");
+		$("#formPlace").text("Спасибо, ваш отзыв очень важен для нас!:)");
 		}
 	});
 
