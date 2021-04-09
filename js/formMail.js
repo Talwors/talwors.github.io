@@ -4,9 +4,11 @@ $("#sendMail").on("click", function() {
 	var phone = $("#phone").val().trim();
 	var message = $("#message").val().trim();
 	var formData = $('input[type=checkbox]:checked').serialize();
-   console.log('Posting the following: ', formData);
-	
-	if(formData ==""){
+	var id = $("#hidden").val();
+
+   console.log('Posting the following: ', id);
+
+   if(formData ==""){
 		$("#errorMess").text("Укажите проблему");
 		return false;
 	}
@@ -21,7 +23,7 @@ $("#sendMail").on("click", function() {
 		url: 'ajax/mail.php',
 		type: 'POST',
 		cache: false,
-		data: { 'name': name, 'phone': phone, 'message': message, 'formData': formData},
+		data: { 'name': name, 'phone': phone, 'message': message, 'formData': formData, 'id': id},
 		dataType: 'html',
 		beforeSend: function(){
 			$("#sendMail").prop("disabled", true);
