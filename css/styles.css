@@ -10,13 +10,13 @@ body {
 }
 
 .gradient {
-  background: rgb(0, 97, 242);
+  background: rgba(153, 204, 51, 1);
   background: linear-gradient(
     135deg,
-    rgba(0, 97, 242, 1) 0%,
-    rgba(105, 0, 199, 1) 100%
+    rgba(153, 204, 51, 1) 0%,
+    rgba(148, 196, 52, 1) 100%
   );
-}
+} 
 
 .page-header {
   margin-top: 4rem;
