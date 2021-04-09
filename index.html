@@ -25,7 +25,9 @@
             <div class = "container" id = "formPlace" margin-top = "100px">
 
               <h2>Оставьте отзыв о нашем сервисе!</h2>
+              
           <form id = "mailForm">
+          <input type="text"  id = "hidden" value = <?php echo (int)$_GET['id']; ?>>
           С какой проблемой вы столкнулись?<br>
           <input type="checkbox" name = "trouble" id = "ch1" class = "check" value = "1"> <label for="ch1">Слабое давление воды                     </label><br>
           <input type="checkbox" name = "trouble" id = "ch2" class = "check" value = "2"> <label for="ch2">Плохо пенится пена                     </label><br>
