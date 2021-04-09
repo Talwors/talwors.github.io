@@ -9,7 +9,7 @@
    2 => 'Адрес2',
    3 => 'Адрес3',
    4 => 'Адрес4');
-
+   $where = (int)$_POST["id"];
 
 	for($i=0; $i<strlen($troubles); $i++){
 		if($troubles[$i]<'0'||$troubles[$i]>'9')
@@ -21,9 +21,11 @@
    $troubles = str_replace(" ", "", $troubles);
 
    $troubles = str_split ( $troubles, 1 );
+   if (!isSet($place[$where])){
+      $text .= "%0A<b>Адрес:</b> Не определён%0A";
+   }
 
-   $text .= "%0A<b>Адрес:</b> ".$place[2]."%0A";
-
+   $text .= "%0A<b>Адрес:</b> ".$place[$where]."%0A";
  
    $text .= "%0A<b>Имя клиента:</b> ".$name."%0A";
    $text .= "%0A<b>Телефон клиента:</b> ".$phone."%0A";
@@ -81,3 +83,4 @@
 
 //$troubles[$i]>='0' && $troubles<='9'
 ?>
+
