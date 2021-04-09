@@ -6,6 +6,9 @@ body {
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
 }
+#hidden{
+  display: none;
+}
 .write{
   margin-top: 25px;
 }
